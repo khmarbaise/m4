@@ -35,8 +35,8 @@ final class ApiController {
 
 
   @GetMapping("/api/employee/{id}")
-  ResponseEntity<EmployeeDTO> findById(@PathVariable Integer id) {
-    return apiService.findById(id);
+  EmployeeDTO findById(@PathVariable("id") EmployeeDTO employeeDTO) {
+    return employeeDTO;
   }
 
 }
